@@ -13,7 +13,7 @@ public class PreferenceDependencyScreen {
         PageFactory.initElements(new AppiumFieldDecorator(Driver.getAppiumDriver(), Duration.ofSeconds(30)),this);
 
     }
-    @AndroidFindBy(xpath = "//android.widget.CheckBox")
+    @AndroidFindBy(xpath = "//android.widget.CheckBox[@checkable='true']")
     public MobileElement checkBox;
 
     @AndroidFindBy(xpath = "//android.widget.TextView[contains(@text,'WiFi settings')]")
