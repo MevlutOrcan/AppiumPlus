@@ -13,6 +13,9 @@ public class Screens {
     private PreferenceDependencyScreen preferenceDependencyScreen;
     private SwitchScreen switchScreen;
 
+    private ViewsScreen viewsScreen;
+    private DragDropScreens dragDropScreens;
+
     public ApiDemosScreen apiDemosScreen() {
         if (apiDemosScreen == null) {
             apiDemosScreen = new ApiDemosScreen();
@@ -50,6 +53,22 @@ public SwitchScreen switchScreen() {
             switchScreen = new SwitchScreen();
         }
         return switchScreen;
+
+    }
+
+    public ViewsScreen viewsScreen() {
+        if (viewsScreen == null) {
+            viewsScreen = new ViewsScreen();
+        }
+        return viewsScreen;
+
+    }
+
+public DragDropScreens dragDropScreens() {
+        if (dragDropScreens == null) {
+            dragDropScreens = new DragDropScreens();
+        }
+        return dragDropScreens;
 
     }
 
