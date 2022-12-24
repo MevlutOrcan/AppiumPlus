@@ -1,6 +1,7 @@
 Feature:  Ilk test
-@a
-  Scenario: Ilk test
+
+  @a
+  Scenario Outline: Ilk test
     Given App loaded
     And   User on the main page
     And   User clicks to API Demos Button
@@ -11,5 +12,11 @@ Feature:  Ilk test
     And   Check box must be choosed
     And   User clicks WIFI Settings
     Then  User sees to WIFI Settings popup
-    And   User sends text
+    And   User sends "<text>"
     And   User clicks to OK button
+
+    Examples:
+      | text |
+      | Ali  |
+      | Weli |
+

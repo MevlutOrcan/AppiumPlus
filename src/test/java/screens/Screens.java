@@ -1,9 +1,6 @@
 package screens;
 
-import screens.androidScreen.ApiDemosScreen;
-import screens.androidScreen.MainScreen;
-import screens.androidScreen.PreferenceDependencyScreen;
-import screens.androidScreen.PreferenceScreen;
+import screens.androidScreen.*;
 
 public class Screens {
     public Screens() {
@@ -14,6 +11,7 @@ public class Screens {
     private MainScreen mainScreen;
     private PreferenceScreen preferenceScreen;
     private PreferenceDependencyScreen preferenceDependencyScreen;
+    private SwitchScreen switchScreen;
 
     public ApiDemosScreen apiDemosScreen() {
         if (apiDemosScreen == null) {
@@ -44,6 +42,14 @@ public class Screens {
             preferenceDependencyScreen = new PreferenceDependencyScreen();
         }
         return preferenceDependencyScreen;
+
+    }
+
+public SwitchScreen switchScreen() {
+        if (switchScreen == null) {
+            switchScreen = new SwitchScreen();
+        }
+        return switchScreen;
 
     }
 

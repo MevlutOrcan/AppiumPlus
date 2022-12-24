@@ -3,7 +3,6 @@ package screens.androidScreen;
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.pagefactory.AndroidFindBy;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
 import utils.Driver;
 
@@ -19,6 +18,6 @@ public class PreferenceScreen {
     public MobileElement preferenceDependencyButton;
 
     @AndroidFindBy(xpath = "//android.widget.TextView[contains(@text,'9. Switch')]")
-    public MobileElement switchButton;
+    public MobileElement switchesButton;
 
 }
