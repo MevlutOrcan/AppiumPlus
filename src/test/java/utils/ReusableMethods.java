@@ -2,7 +2,10 @@ package utils;
 
 
 import io.appium.java_client.MobileElement;
+import io.appium.java_client.TouchAction;
 import io.appium.java_client.android.AndroidDriver;
+import io.appium.java_client.touch.LongPressOptions;
+import io.appium.java_client.touch.offset.ElementOption;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -10,6 +13,7 @@ import java.util.List;
 
 
 public class ReusableMethods {
+    static TouchAction action=new TouchAction(Driver.getAppiumDriver());
 
          public static void tapOnElementWithText(String text) {
             List<MobileElement> mobileElementList = Driver.getAppiumDriver().findElementsByClassName("android.widget.TextView");

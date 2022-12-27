@@ -114,7 +114,7 @@ public class ApiDemosSteps extends ReusableMethods {
 
     @Then("User on the {string} monitor")
     public void user_on_the_monitor(String string) {
-        isElementPresent(string);
+        Assert.assertTrue(isElementPresent(string));
 
     }
 
