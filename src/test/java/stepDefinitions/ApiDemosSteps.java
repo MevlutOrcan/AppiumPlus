@@ -158,6 +158,9 @@ public class ApiDemosSteps extends ReusableMethods {
             tapOn(screens.switchScreen().switchPreference2);
         }
     }
-
+    @Given("User clicks {int} Button")
+    public void user_clicks_button(int index) {
+        tapOn(screens.popUpMenuScreen().buttons.get(index));
+    }
 
 }

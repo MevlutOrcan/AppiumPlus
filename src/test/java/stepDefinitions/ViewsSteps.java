@@ -2,6 +2,7 @@ package stepDefinitions;
 
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.TouchAction;
+import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.touch.LongPressOptions;
 import io.appium.java_client.touch.WaitOptions;
 import io.appium.java_client.touch.offset.ElementOption;
@@ -98,6 +99,16 @@ public class ViewsSteps extends ReusableMethods {
 
         } while (list.size() == 0);
         tapOn(screens.viewsScreen().switchesButton.get(0));
+
+    }
+    @Given("User clicks {string} button")
+    public void user_clicks_button(String str) {
+       /* AndroidDriver driver=(AndroidDriver)Driver.getAppiumDriver();
+        driver.findElementByAndroidUIAutomator("new UiScrollable(new UiSelector()).scrollIntoView(text(\"Switches\"))");
+        tapOn((MobileElement) driver.findElementByAndroidUIAutomator("UiSelector().className(\"android.widget.TextView\").text(\"Switches\")"));
+    */
+        scrollWithUiScrollable(str);
+
 
     }
 }

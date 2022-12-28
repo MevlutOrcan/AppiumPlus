@@ -15,6 +15,7 @@ public class Screens {
 
     private ViewsScreen viewsScreen;
     private DragDropScreens dragDropScreens;
+    private PopUpMenuScreen popUpMenuScreen;
 
     public ApiDemosScreen apiDemosScreen() {
         if (apiDemosScreen == null) {
@@ -69,6 +70,13 @@ public DragDropScreens dragDropScreens() {
             dragDropScreens = new DragDropScreens();
         }
         return dragDropScreens;
+
+    }
+public PopUpMenuScreen popUpMenuScreen() {
+        if (popUpMenuScreen == null) {
+            popUpMenuScreen = new PopUpMenuScreen();
+        }
+        return popUpMenuScreen;
 
     }
 
