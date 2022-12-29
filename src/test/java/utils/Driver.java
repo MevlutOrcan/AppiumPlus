@@ -31,6 +31,7 @@ public class Driver {
             desiredCapabilities.setCapability(MobileCapabilityType.DEVICE_NAME, ConfigReader.getProperty("deviceName"));
             desiredCapabilities.setCapability(MobileCapabilityType.APP, ConfigReader.getProperty("appPath"));
             desiredCapabilities.setCapability(MobileCapabilityType.NO_RESET, true);
+            //IOS da alttaki kismi direkt olarak kabul ediyor
             desiredCapabilities.setCapability("autoAcceptAlert",true);
             desiredCapabilities.setCapability(MobileCapabilityType.NEW_COMMAND_TIMEOUT,"60000");
 
