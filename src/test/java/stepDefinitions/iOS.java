@@ -14,7 +14,7 @@ public class iOS extends ReusableMethods {
 
     @And("User clicks to okay button")
     public void userClicksToOkayButton() {
-        screens.alertViewScreen().okButton.click();
+        tapOn(screens.alertViewScreen().okCancelButton);
     }
 
     @And("User on the popup screen")
@@ -24,6 +24,7 @@ public class iOS extends ReusableMethods {
 
     @And("User clicks ok button")
     public void userClicksOkButton() {
-        tapOn(screens.alertViewScreen().okCancelButton);
+
+        screens.alertViewScreen().okButton.click();
     }
 }

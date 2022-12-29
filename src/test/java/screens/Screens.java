@@ -2,6 +2,7 @@ package screens;
 
 import screens.androidScreen.*;
 import screens.iosScreen.AlertViewScreen;
+import screens.iosScreen.PickerViewScreen;
 
 public class Screens {
     public Screens() {
@@ -13,6 +14,7 @@ public class Screens {
     private PreferenceScreen preferenceScreen;
     private PreferenceDependencyScreen preferenceDependencyScreen;
     private SwitchScreen switchScreen;
+    private PickerViewScreen pickerViewScreen;
 
     private ViewsScreen viewsScreen;
     private DragDropScreens dragDropScreens;
@@ -90,5 +92,12 @@ public AlertViewScreen alertViewScreen() {
     }
 
 
+
+    public PickerViewScreen pickerViewScreen(){
+        if (pickerViewScreen == null){
+            pickerViewScreen=new PickerViewScreen();
+        }
+        return pickerViewScreen;
+    }
 
 }
