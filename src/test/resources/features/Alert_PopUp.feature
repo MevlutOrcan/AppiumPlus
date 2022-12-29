@@ -10,4 +10,6 @@ Feature: Api Demos
     And User clicks 0 Button
     And User wait 2 sec
     And User clicks to "Search" button
+    And User verifies popUp
     And screenshot al
+

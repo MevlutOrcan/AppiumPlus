@@ -12,9 +12,17 @@ import java.time.Duration;
 import java.util.List;
 
 public class PopUpMenuScreen {
-    public PopUpMenuScreen(){
-        PageFactory.initElements(new AppiumFieldDecorator(Driver.getAppiumDriver(), Duration.ofSeconds(30)),this);
+    public PopUpMenuScreen() {
+        PageFactory.initElements(new AppiumFieldDecorator(Driver.getAppiumDriver(), Duration.ofSeconds(30)), this);
     }
+
     @AndroidFindBy(className = "android.widget.Button")
     public List<MobileElement> buttons;
+
+    @AndroidFindBy(xpath = "//android.widget.Toast[contains(@text,'Clicked')]")
+    public MobileElement popUpMessage;
+    //Eger popup test edılmek ıstenıyorsa ve bu search kod ıcınde bulunmuyorsa
+//developerlar genelde bunu asagıdaki gibi className= "android.widget.Toast" ile build ederler bizde bu sekilde verify ederiz
+
+
 }

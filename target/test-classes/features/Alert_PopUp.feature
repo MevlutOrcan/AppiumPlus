@@ -1,5 +1,6 @@
 Feature: Api Demos
-@q
+
+  @q
   Scenario: PopUp Test
     Given App loaded
     And User on the main page
@@ -7,6 +8,8 @@ Feature: Api Demos
     And User clicks to "Views" button
     And User clicks to "Popup Menu" button
     And User clicks 0 Button
-  And User clicks to "Search" button
-  And User wait 2 sec
-  And screenshot al
+    And User wait 2 sec
+    And User clicks to "Search" button
+    And User verifies popUp
+    And screenshot al
+

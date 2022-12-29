@@ -17,6 +17,7 @@ import utils.ReusableMethods;
 
 import java.time.Duration;
 import java.util.List;
+import java.util.Set;
 
 public class ViewsSteps extends ReusableMethods {
     TouchAction action = new TouchAction(Driver.getAppiumDriver());
@@ -101,6 +102,7 @@ public class ViewsSteps extends ReusableMethods {
         tapOn(screens.viewsScreen().switchesButton.get(0));
 
     }
+
     @Given("User clicks {string} button")
     public void user_clicks_button(String str) {
        /* AndroidDriver driver=(AndroidDriver)Driver.getAppiumDriver();
@@ -111,4 +113,27 @@ public class ViewsSteps extends ReusableMethods {
 
 
     }
+
+    @Given("User clicks to WebView button")
+    public void user_clicks_to_web_view_button() {
+
+     System.out.println("webview tiklamadan once ====>"+Driver.getAppiumDriver().getContext());
+
+        ReusableMethods.scrollWithUiScrollable("WebView");
+
+        ReusableMethods.wait(3);
+        System.out.println("webview tiklamadan sonraki ====>"+Driver.getAppiumDriver().getContext());
+
+    Set<String>  allContext=Driver.getAppiumDriver().getContextHandles();
+
+
+        for (String each : allContext){
+        System.out.println(each);
+        if (each.contains("WEBVIEW")){
+            Driver.getAppiumDriver().context("WEBVIEW");
+        }
+    }
+        System.out.println("son durum =====>" +Driver.getAppiumDriver().getContext());
+}
+
 }

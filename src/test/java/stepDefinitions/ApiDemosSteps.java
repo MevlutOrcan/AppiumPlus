@@ -162,5 +162,15 @@ public class ApiDemosSteps extends ReusableMethods {
     public void user_clicks_button(int index) {
         tapOn(screens.popUpMenuScreen().buttons.get(index));
     }
+    @Given("User verifies popUp")
+    public void user_verifies_pop_up() {
+        String message=screens.popUpMenuScreen().popUpMessage.getAttribute("name");
+
+        Assert.assertTrue(message.contains("Clicked"));
+
+        System.out.println("Full Message  -->"+message);
+        //Eger popup test edılmek ıstenıyorsa ve bu search kod ıcınde bulunmuyorsa
+//developerlar genelde bunu asagıdaki gibi className= "android.widget.Toast" ile build ederler bizde bu sekilde verify ederiz
+    }
 
 }
